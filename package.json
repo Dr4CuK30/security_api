@@ -1,0 +1,29 @@
+{
+	"name": "securityapi",
+	"version": "0.0.1",
+	"description": "Api to Security Ap",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Dr4CuK30/SecurityAPI.git"
+	},
+	"author": "David Saldarriaga",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Dr4CuK30/SecurityAPI/issues"
+	},
+	"homepage": "https://github.com/Dr4CuK30/SecurityAPI#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"dotenv": "^9.0.2",
+		"express": "^4.17.1",
+		"express-validator": "^6.11.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.11"
+	}
+}
