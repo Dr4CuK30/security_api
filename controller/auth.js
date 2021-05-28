@@ -31,6 +31,13 @@ const login = async (req = request, res = response) => {
 	}
 };
 
+const authToken = (req = request, res = response) => {
+	res.status(200).json({
+		msg: "auth",
+	});
+};
+
 module.exports = {
 	login,
+	authToken,
 };
