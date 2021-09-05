@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const dbConnection = require("../database/config");
+const express = require('express');
+const cors = require('cors');
+const dbConnection = require('../database/config');
 
 class Server {
 	constructor() {
@@ -17,8 +17,9 @@ class Server {
 	}
 
 	routes() {
-		this.app.use("/api/users", require("../routes/usuarios"));
-		this.app.use("/api/auth", require("../routes/auth"));
+		this.app.use('/api/users', require('../routes/usuarios'));
+		this.app.use('/api/auth', require('../routes/auth'));
+		this.app.use('/api/images', require('../routes/images'));
 	}
 
 	async dbConnect() {
@@ -28,7 +29,8 @@ class Server {
 	listen() {
 		this.app.listen(process.env.PORT, () => {
 			console.log(
-				"Aplicacion Funcionando en puerto: " + process.env.PORT
+				'Aplicacion Funcionando en puerto: ' +
+					process.env.PORT
 			);
 		});
 	}

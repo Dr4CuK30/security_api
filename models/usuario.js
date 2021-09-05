@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose');
 
 const UsuarioSchema = Schema({
 	usuario: {
@@ -23,7 +23,7 @@ const UsuarioSchema = Schema({
 		type: String,
 		required: true,
 	},
-	dispositivos: {
+	images: {
 		type: Array,
 		default: [],
 	},
@@ -35,4 +35,4 @@ UsuarioSchema.methods.toJSON = function () {
 	return user;
 };
 
-module.exports = model("Usuario", UsuarioSchema);
+module.exports = model('Usuario', UsuarioSchema);
