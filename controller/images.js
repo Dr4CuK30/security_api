@@ -14,7 +14,7 @@ const postImage = async (req = request, res = response) => {
 	decodedJwt = jwt.decode(req.header('tokenx'));
 	userData = await usuario.findById(decodedJwt.uid);
 	const uploadParams = {
-		Bucket: 'security-storage-arch',
+		Bucket: 'securityapi',
 		Key: `${userData._id}_${Date.now()}`,
 		Body: req.file.buffer,
 		ContentType: 'image/jpeg',
