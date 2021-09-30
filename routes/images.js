@@ -7,6 +7,6 @@ const router = Router();
 
 router.get('/', [validarToken], getImages);
 
-router.post('/', [upload, validarToken], postImage);
+router.post('/', [validarToken], postImage);
 
 module.exports = router;

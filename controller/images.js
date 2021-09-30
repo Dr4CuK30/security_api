@@ -10,13 +10,16 @@ const getImages = async (req = request, res = response) => {
 };
 
 const postImage = async (req = request, res = response) => {
+	console.log('------------------------------------------');
+	console.log(req.body);
+	console.log('------------------------------------------');
 	s3 = getS3();
 	decodedJwt = jwt.decode(req.header('tokenx'));
 	userData = await usuario.findById(decodedJwt.uid);
 	const uploadParams = {
 		Bucket: 'securityapi',
 		Key: `${userData._id}_${Date.now()}`,
-		Body: req.file.buffer,
+		Body: req.body.file,
 		ContentType: 'image/jpeg',
 		ACL: 'public-read',
 		ContentEncoding: 'base64',
